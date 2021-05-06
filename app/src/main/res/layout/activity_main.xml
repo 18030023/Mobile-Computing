@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+<!-- merapikan layout -->
+    <EditText
+        android:id="@+id/editNIM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="15dp"
+        android:hint="NIM"
+        android:inputType="textPersonName|textCapWords"
+        android:nextFocusDown="@id/nama"/>
+
+    <EditText
+        android:id="@+id/nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Nama Mahasiswa "
+        android:padding="15dp"
+        android:inputType="textEmailAddress" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pilihan Kelas"
+        android:textSize="18dp"
+        android:layout_marginTop="10dp"
+        android:padding="15dp" />
+
+    <RadioGroup
+        android:id="@+id/pilihanKelas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical"
+        android:checkedButton="@id/kelasA" >
+
+        <RadioButton
+            android:id="@+id/kelasA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kelas A" />
+
+        <RadioButton
+            android:id="@+id/kelasB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kelas B" />
+
+    </RadioGroup>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/kirimData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:padding="15dp"
+            android:text="SEND DATA"
+            android:onClick="kirimData" />
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>
